@@ -49,7 +49,7 @@ const search_llaveprocess = async () => {
         const Response = await fetch ("https://consultaprocesos.ramajudicial.gov.co:448/api/v2/Proceso/Actuaciones/"+ idProceso +"?pagina=1");
         const consulta_proceso = await Response.json();
         const actuacion_proceso = consulta_proceso.actuaciones[0];
-        console.log(actuacion_proceso)
+        console.log(actuacion_proceso);
         return actuacion_proceso.actuacion;
       
 
