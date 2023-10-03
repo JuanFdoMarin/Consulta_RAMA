@@ -8,26 +8,27 @@
 </head>
 <body>
    
-    <label>Fecha(Filtro):</label>
-    <input type="date" id="date" value="">
-    <label>Radicado</label>
-    <input type="text" id="radicado" value="">
-    <button type="button" id="buscar" onclick="buscar_recargarpagina()">Buscar</button>
-    
+    <h3>Consulta de procesos por radicado</h3>
+    <div>
+        <label>Fecha ultima Actuacion (Filtro):</label>
+        <input type="date" id="date" value="">
+        <label>Radicado</label>
+        <input type="text" id="radicado" value="" style="width: 230px;" maxlength="23" minlength="23">
+        <button type="button" id="buscar" onclick="buscar_recargarpagina()">Buscar</button>
+        <button type="button" id="export" onclick="exportTableToExcel('tablaprocesos')">Export</button>
+    </div>
 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="table-responsive">
-                    <table class="table">
-                        <thead>
+                    <table id="tablaprocesos" class="table table-striped table-bordered align-middle">
+                        <thead class="table-dark">
                             <tr>
-                                <th>#</th>
-                                <th>Proceso</th>
-                                <th>fechaProceso</th>
-                                <th>fechaUltimaActuacion</th>
-                                <th>despacho</th>
-                                <th>Departamento</th>
+                                <th># Radicado</th>
+                                <th>FechaProceso</th>
+                                <th>FechaUltimaActuacion</th>
+                                <th>Despacho</th>
                                 <th>idProceso</th>
                                 <th>Actuacion</th>
                                 <th>FechaActuacion</th>
@@ -41,6 +42,6 @@
         </div>
     </div>
 
-    <script src="consulta(2).js"></script>
+    <script src="consulta.js"></script>
 </body>
 </html>
