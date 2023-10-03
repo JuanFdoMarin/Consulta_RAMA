@@ -98,7 +98,8 @@ async function obtenerConsulta(llaveProcess){
     consulta_radicado = await consulta.json();
 
     if (consulta_radicado.paginacion.cantidadRegistros == 0) {
-        alert("No se encontro información, revise el número del radicado")      
+        alert("No se encontro información, revise el número del radicado: "+llaveProcess)
+
     };
 
     llavePorcess_variantes.push({consulta_radicado});
